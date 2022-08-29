@@ -1,6 +1,14 @@
 #!/bin/bash
 # This script will download neovim then create the .config/nvim file after that it will copy .vimrc to init.vim
 # Download Neovim
-sudo apt install neovim
+dist=$(grep "^ID=" /etc/os-release | sed -E 's/ID=(.*)/\1/')
+case $dist in
+   debian) sudo apt install neovim;;
+   ubuntu) sudo apt install neovim;;
+   arch) sudo pacman install neovim;;
+   fedora) sudo dnf install neovim;;
+esac
+# Create directory
 mkdir /$HOME/.config/nvim
+# Copy the content of .vimrc to .config/nvim/init.vim
 cp /$HOME/.vimrc $HOME/.config/nvim/init.vim
