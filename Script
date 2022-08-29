@@ -1,0 +1,6 @@
+#!/bin/bash
+# This script will download neovim then create the .config/nvim file after that it will copy .vimrc to init.vim
+# Download Neovim
+sudo apt install neovim
+mkdir /$HOME/.config/nvim
+cp /$HOME/.vimrc $HOME/.config/nvim/init.vim
