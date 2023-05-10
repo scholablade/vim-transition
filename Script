@@ -3,10 +3,15 @@
 # Download Neovim
 dist=$(grep "^ID=" /etc/os-release | sed -E 's/ID=(.*)/\1/')
 case $dist in
-   debian) sudo apt install neovim;;
+   debian) sudo apt install neovim;; 
    ubuntu) sudo apt install neovim;;
    arch) sudo pacman install neovim;;
    fedora) sudo dnf install -y neovim python3-neovim;;
+   guix) guix install neovim;;
+   nix) nix-env -iA nixpkgs.neovim;;
+   clear) sudo swupd bundle-add neovim;;
+   solus) sudo eopkg install neovim;;
+   
    
 esac
 # Create directory
