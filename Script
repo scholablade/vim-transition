@@ -6,7 +6,8 @@ case $dist in
    debian) sudo apt install neovim;;
    ubuntu) sudo apt install neovim;;
    arch) sudo pacman install neovim;;
-   fedora) sudo dnf install neovim;;
+   fedora) sudo dnf install -y neovim python3-neovim;;
+   
 esac
 # Create directory
 mkdir /$HOME/.config/nvim
