@@ -11,9 +11,7 @@ case $dist in
    nix) nix-env -iA nixpkgs.neovim;;
    clear) sudo swupd bundle-add neovim;;
    solus) sudo eopkg install neovim;;
-   
-   
-esac
+   esac
 # Create directory
 mkdir /$HOME/.config/nvim
 # Copy the content of .vimrc to .config/nvim/init.vim
