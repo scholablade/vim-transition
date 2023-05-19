@@ -18,3 +18,4 @@ case $dist in
 mkdir /$HOME/.config/nvim
 # Copy the content of .vimrc to .config/nvim/init.vim
 cp /$HOME/.vimrc $HOME/.config/nvim/init.vim
+alias vim=nvim
